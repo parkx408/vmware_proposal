@@ -1,0 +1,38 @@
+% plan.tex
+\section{Statement of Work}
+\label{plan}
+%
+This is a three phase project. The first phase is to predict the performance of a virtual disk given a workload and a storage system. The second phase is to model the performance interference between different virtual disks on a single storage system. The last phase is to map application requirements to resource mapping. 
+
+\subsection{Schedule}
+%
+\bigskip
+\begin{tabular}{l|l}
+\hspace{.25in} Year 1 \hspace{.25in} & 
+\begin{minipage}{5in}
+  Virtual Disk Performance Model\\
+	Workload Interference Model\\
+  \\
+  By the end of year 1, we expect to determine pseudo-optimal virtual disk placements such that performance requirement of each virtual disk is satisfied with minimum number of storage systems.
+\medskip
+\end{minipage}\\
+\hline
+\hspace{.25in} Year 2 & 
+\begin{minipage}{5in}
+  \medskip
+  Application Performance Monitor\\
+	Dynamic Resource Allocator\\
+  \\
+  By the end of year 2, we expect to meet the various application requirements by dynamically mapping of resources and performing necessary migrations. 
+\medskip
+\end{minipage}\\
+\end{tabular}
+
+\subsection{Deliverable} 
+\label{deliverable} 
+%
+\begin{itemize}
+\item Fully functional system that monitors application behaviors as well as VM behaviors to map available resources on heterogenous compute and storage nodesto satisfy the diverse requirements of IO intensive applications. 
+\item Statsitical models that allow IO performance prediction at virtual disk level. 
+\item Verification of the models used to predict application performance.
+\end{itemize}

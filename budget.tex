@@ -1,0 +1,155 @@
+% budget.tex
+% defs for below.  note " " after defs.
+\def\piA{David J. Lilja}
+\def\numRAs{2}
+\def\pilist{PI: \piA}
+\def\thisyear{2012}
+\def\startdate{09/02/2012}
+\def\enddate{09/01/2012}
+\def\phdstipend{\$2,125/mo }
+\def\mscstipend{\$1,940/mo }
+\def\studraise{4\% }
+\def\salaryallocationrate{8.34\%} % no trailing space
+\def\employeebenefitrate{27.0\% }
+\def\vacationaccrualrate{9.5\% }
+\def\networkservicescost{\$100/person/month }
+\def\networkfacilitycharges{\$150/person/month} % no trailing space
+\def\MITninemonthtuition{\$33,400} % no trailing space
+\def\MITtuitioninflator{4\% }
+\def\MITtuitionsubsidy{45\% }
+\def\MITtuitioncharge{55\% }
+\def\msAllocation{1.24\%}
+\def\facostinception{07/01/2006} % no trailing space
+\def\facostrate{65\% }
+
+% make the outer enumerated list alpha A, B, C ...
+\renewcommand{\theenumi}{\Alph{enumi}}
+\renewcommand{\theenumii}{\arabic{enumii}}
+
+\vspace*{1.0in}
+\begin{center}
+{\large
+UMN / ARTiC Laboratory \\
+\pilist \\
+Proposed Budget Period: \startdate -- \enddate \\
+Budget Justification for Cost Proposal
+}
+\end{center}
+
+\begin{enumerate}
+
+%A
+\item \underline{Key Personnel:}
+
+\begin{tabular}{|l|l|} \hline
+\underline{Last Name} & \underline{Review/Raise} \\ \hline
+\piA & June \\ \hline
+\end{tabular}
+
+MIT fully supports the academic year salaries of professors, associate
+professors, and assistant professors, but makes no specific commitment
+of time or salary to any individual research project.
+
+%B
+\item \underline{Other Personnel:}
+
+\begin{enumerate}
+  \item \underline{Research Assistants:} \\{~}\\
+100\% of the stipend is charged to the research project. The RA stipend
+is not subject to employee benefits. Stipend for the year beginning on
+\startdate is \phdstipend for a PhD student and \mscstipend for a
+Masters student. A \studraise raise is applied each year (in June).
+
+%2
+  \item \underline{Other (Technical \& Administrative Support):}\\{~}\\
+The Computer Science Artificial Intelligence Laboratory (CSAIL) provides administrative
+services for all principal investigators who submit proposals through CSAIL. These
+administrative services are run by the Headquarters Staff and include Fiscal, Personnel,
+Facilities and other CSAIL operations.\\{~}\\
+These services are supported by an Allocated Project Level Cost, which is assessed against all
+contracts and grants. The current rate for the Salary Allocation is \salaryallocationrate. The Allocation
+Base is shown below:
+
+\begin{tabular}{|c|c|c|c|} \hline
+Allocation & Year 1 & Year 2 & Year 3 \\ \hline
+Base & \$XXX,YYY & \$XXX,YYY & \$XXX,YYY \\ \hline
+\end{tabular}
+
+\end{enumerate}
+
+\item \underline{Fringe Benefits}
+
+\begin{enumerate}
+
+%(a)
+\item Employee benefits are calculated at the rate of \employeebenefitrate and 
+are applied to total salary expenses, less Research Assistants.
+
+\item Vacation accruals are calculated at the rate of \vacationaccrualrate and 
+are applied to total salary expenses, less Faculty and Research
+Assistants.
+
+\end{enumerate}
+
+%D
+\item \underline{Travel:}
+
+\begin{enumerate}
+
+\item \underline{Domestic Travel:}
+
+\item \underline{Foreign Travel:}
+
+\end{enumerate}
+
+\item \underline{Other Direct Costs:}
+
+\begin{enumerate}
+
+\item \underline{Material \& Supplies:}\\{~}\\
+Estimated costs for software and supplies needed for the project.
+
+\item \underline{Computer Services:}\\{~}\\
+MIT/CSAIL has a centralized network services function. The costs consist of Network Services at
+\networkservicescost and Network Facility Charges at \networkfacilitycharges. The base number of
+people used for this calculation was \numRAs (the two full time RAs).
+
+\item \underline{Other:}\\{~}\\
+(a) RA tuition: For the academic year starting \thisyear, MIT 9-month
+tuition is \MITninemonthtuition. A \MITtuitioninflator annual inflator
+is applied each year. MIT will subsidize \MITtuitionsubsidy of tuition,
+leaving \MITtuitioncharge to be charged to the project. During the
+summer, MIT has waived tuition.\\{~}\\ 
+(b) Allocated expenses are assessed against all contracts and
+grants. The current rate for the Materials and Services Allocation is
+\msAllocation. These funds help support the Headquarters staff mentioned
+above in the section entitled ``Other (Technical \& Administrative
+Support)''. Please see the table in that section for the allocation
+base.
+
+\item \underline{Equipment:}
+
+The equipment line items will support purchases as follows:
+
+\begin{itemize}
+
+\item Year One (\$X,XXX): enter purpose, items and costs here
+
+\item Year Two (\$X,XXX): enter purpose, items and costs here
+
+\item Year Three (\$X,XXX): enter purpose, items and costs here
+
+\end{itemize}
+
+\item \underline{[Describe any other direct cost items here]:}
+
+\end{enumerate}
+
+\item \underline{Indirect Costs (Facilities \& Administrative Costs):}\\{~}\\
+Effective \facostinception, F\&A Costs are calculated by applying the
+negotiated rate of \facostrate to the Modified Total Direct Cost (MTDC)
+base. The MTDC base includes all direct costs, except Graduate Student
+Tuition, Network Facilities Charges, the Salary Allocation (and
+associated benefits), and the Materials and Services Allocation.
+
+\end{enumerate}

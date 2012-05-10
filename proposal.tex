@@ -1,0 +1,85 @@
+% proposal.tex
+\documentclass[12pt]{article}
+\input{preamble}
+
+\date{\today }
+
+\input{author}
+
+\input{title}
+
+\begin{document}
+
+\bibliographystyle{plain}
+\setcounter{page}{1}
+
+\maketitle
+
+%\input{checklist}
+
+\newpage
+\pagestyle{empty}
+
+% 1 page summary, required by NSF
+\input{summary}
+
+\newpage
+\pagestyle{plain}
+\setcounter{page}{1}
+
+% GPG dictates section, so must use \subsection inside
+\section*{Project Description}  %% limited to 15 pages 
+\addcontentsline{toc}{section}{C. Project Description}
+
+%% {\em The main body of the proposal should be a clear statement of
+%% the work to be undertaken and should include: objectives for the
+%% period of the proposed work and expected significance, relation to
+%% longer-term goals of the PI's project, and relation to the present
+%% state of knowledge in the field, to work in progress by the PI
+%% under other support and to work in progress elsewhere.  The
+%% statement should outline the general plan of work, including 
+%% the broad design of activities to be undertaken, an adequate
+%% description of experimental methods and procedures, and if
+%% appropriate, plans for preservation, documentation, and sharing of
+%% data, samples, physical collections and other related research
+%% products.  Any substantial collaboration with individuals not
+%% included in the budget should be described with a letter from 
+%% each \ldots.} 
+
+% a top-level Section, with Subsections
+\input{objectives}
+
+% more technical content
+\input{technical}
+
+% statement of work
+\input{sow}
+
+% related work
+%\input{related}
+
+% prior NSF work by PI's
+%\input{priornsf}
+
+% turn off pagination; no page limit for references
+\pagestyle{empty}
+\renewcommand{\refname}{References Cited}
+% generate References Cited section
+\bibliography{refsA}
+
+%\newpage
+
+% description of facilities
+%\input{facilities}
+
+\newpage
+
+% budget justification
+%\input{budget}
+
+%\newpage
+
+% bios for all Co-PI's (not required for Co-I's)
+\input{bios}
+
+\end{document}

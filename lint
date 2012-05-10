@@ -1,0 +1,6 @@
+#!/bin/sh
+
+GREP="grep -Hn --color=always"
+
+#$GREP "LQ-slope" *.tex
+exit 0

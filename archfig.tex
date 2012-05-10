@@ -1,0 +1,166 @@
+\begin{tikzpicture}[font=\small, auto, align=center]
+\node[multi,
+	minimum width=2cm,
+	rectangle split parts=5
+	] (RSRC1) {
+		\textbf{Physical} \\ \textbf{Resources}
+		\nodepart{two} CPU
+		\nodepart{three} Memory
+		\nodepart{four} Storage
+		\nodepart{five} Network
+	};
+\node[block,
+	minimum width=2cm
+	] (RSRC2) 
+	[below=1mm of RSRC1] {
+		\textbf{Physical} \\ \textbf{Resources}
+	};
+\node[multi,
+	rectangle split parts=3,
+	fill=blue!20,
+	minimum width=3cm
+	] (MAP) 
+	[right=1cm of RSRC1.five east] {
+		\textbf{Resource} \textbf{Map}
+		\nodepart{two} VM Map
+		\nodepart{three} Storage Map
+	};
+\node[block,
+	fill=red!20,
+	minimum width=3cm
+	] (ENTITLE1)
+	[below=1mm of MAP] {
+		\textbf{Resource} \\ \textbf{Entitlement}
+	};
+\node[block,
+	fill=red!20,
+	minimum width=3cm
+	] (ENTITLE2)
+	[below=1mm of ENTITLE1] {
+		\textbf{Resource} \\ \textbf{Entitlement}
+	};
+\node[multi,
+	minimum width=2cm,
+	fill=red!20,
+	rectangle split parts=5
+	] (VRSRC1) 
+	[right=5cm of RSRC1] {
+		\textbf{Virtual} \\ \textbf{Resources}
+		\nodepart{two} CPU
+		\nodepart{three} Memory
+		\nodepart{four} Storage
+		\nodepart{five} Network
+	};
+\node[block,
+	fill=red!20,
+	minimum width=2cm
+	] (VRSRC2) 
+	[below=1mm of VRSRC1] {
+		\textbf{Virtual} \\ \textbf{Resources}
+	};
+\node[block,
+	fill=red!20,
+	minimum width=2cm
+	] (VRSRC3) 
+	[below=1mm of VRSRC2] {
+		\textbf{Virtual} \\ \textbf{Resources}
+	};
+\node[block,
+	fill=red!20,
+	minimum width=2cm
+	] (VRSRC4) 
+	[below=1mm of VRSRC3] {
+		\textbf{Virtual} \\ \textbf{Resources}
+	};
+\node[multi,
+	minimum width=3cm,
+	fill=blue!20,
+	inner ysep=0.19cm,
+	rectangle split parts=3
+	] (POLMAN)
+	[above=1cm of MAP] {
+		\textbf{Policy} \\ \textbf{Manager}
+		\nodepart{two} Application \\ Policy
+		\nodepart{three} VM Policy
+	};
+\node[block,
+	fill=blue!20,
+	minimum width=3cm,
+	minimum height=1.2cm
+	] (RSCMON)
+	[left=1mm of POLMAN.text west] {
+		\textbf{Resource} \\ \textbf{Monitor}
+	};
+\node[block,
+	fill=blue!20,
+	minimum width=3cm,
+	minimum height=1.2cm
+	] (VMMON)
+	[right=1mm of POLMAN.text east] {
+		\textbf{VM} \\ \textbf{Monitor}
+	};
+\node[block,
+	fill=blue!20,
+	minimum width=3cm,
+	minimum height=1.2cm
+	] (APPMON)
+	[right=1mm of VMMON] {
+		\textbf{Application} \\ \textbf{Monitor}
+	};
+\node[multi,
+	minimum width=2cm,
+	rectangle split parts=3
+	] (VM1) 
+	[right=1cm of VRSRC1] {
+		\textbf{Virtual} \\ \textbf{Machine}
+		\nodepart{two} App 1
+		\nodepart{three} App 2
+	};
+\node[block,
+	minimum width=2cm
+	] (VM2) 
+	[below=1mm of VM1] {
+		\textbf{Virtual} \\ \textbf{Machine}
+	};
+\node[block,
+	minimum width=2cm
+	] (VM3) 
+	[below=1mm of VM2] {
+		\textbf{Virtual} \\ \textbf{Machine}
+	};
+\node[block,
+	minimum width=2cm
+	] (VM4) 
+	[below=1mm of VM3] {
+		\textbf{Virtual} \\ \textbf{Machine}
+	};
+\path[arrow] (RSRC1.north) -- (RSCMON.south);
+\path[arrow] (VRSRC1.north) -- (VMMON.south);
+\path[arrow] (VM1.north) -- (APPMON.south);
+\path[line] (RSRC1.text east) -- (MAP.text west);
+%\path[line] (RSRC1.two east) -- (MAP.two west);
+%\path[line] (RSRC1.three east) -- (MAP.two west);
+%\path[line] (RSRC1.five east) -- (MAP.two west);
+%\path[line] (RSRC1.four east) -- (MAP.three west);
+\path[line] (RSRC2.east) -- (MAP.text west);
+\path[line] (RSRC1.text east) -- (ENTITLE1.west);
+\path[line] (RSRC2.east) -- (ENTITLE2.west);
+\path[line] (ENTITLE1.east) -- (VRSRC1.text west);
+\path[line] (ENTITLE1.east) -- (VRSRC2.west);
+\path[line] (ENTITLE2.east) -- (VRSRC3.west);
+\path[line] (ENTITLE2.east) -- (VRSRC4.west);
+\path[line] (MAP.text east) -- (VRSRC1.text west);
+\path[line] (MAP.text east) -- (VRSRC2.west);
+\path[line] (MAP.text east) -- (VRSRC3.west);
+\path[line] (MAP.text east) -- (VRSRC4.west);
+\path[line] (VRSRC1.text east) -- (VM1.text west);
+\path[line] (VRSRC2.east) -- (VM2.west);
+\path[line] (VRSRC3.east) -- (VM3.west);
+\path[line] (VRSRC4.east) -- (VM4.west);
+\path[arrow] (RSCMON) edge[out=90, in=90] (POLMAN);
+\path[arrow] (VMMON) edge[out=90, in=90] (POLMAN);
+\path[arrow] (APPMON) edge[out=90, in=90] (POLMAN);
+\path[arrow] (POLMAN.south) -- (MAP.north);
+
+\end{tikzpicture}
+

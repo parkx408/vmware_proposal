@@ -1,6 +1,6 @@
 RUBBER=rubber -Wall
 
-pdf: proposal.pdf
+pdf: proposal.pdf 
 .PHONY: pdf
 
 proposal.pdf:
